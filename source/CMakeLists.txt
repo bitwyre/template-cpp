@@ -6,9 +6,9 @@ include(sanitizers)
 
 # Enable helpfull warnings and C++14 for all files
 if(MSVC)
-    add_compile_options(/std:c++14 /W3 /WX )
+    add_compile_options(/std:c++2a /W3 /WX )
 else()
-    add_compile_options(-std=c++14 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wunused -pedantic)
+    add_compile_options(-std=c++2a -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wunused -pedantic)
 endif()
 
 # configure version.cpp.in with selected version
