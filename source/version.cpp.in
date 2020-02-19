@@ -31,11 +31,11 @@ const Version& current()
 Version::Version() {}
 Version::Version(long long version)
 {
-    major = version / (1000 * 1000);
+    major = static_cast<int>(version / (1000 * 1000));
     version = version % (1000 * 1000);
-    minor = version / (1000);
+    minor = static_cast<int>(version / (1000));
     version = version % (1000);
-    patch = version;
+    patch = static_cast<int>(version);
 }
 //-----------------------------------------------------------------------------------
 long long Version::asNumber() const
